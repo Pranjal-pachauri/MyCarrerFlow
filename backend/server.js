@@ -132,9 +132,20 @@ app.use((err, req, res, next) => {
     });
 });
 
-// Start server
-const PORT = process.env.PORT || 5000;
+// // Start server
+// const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-    console.log(`MyCareerFlow API running on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//     console.log(`MyCareerFlow API running on port ${PORT}`);
+// });
+
+// Start server locally
+if (require.main === module) {
+    const PORT = process.env.PORT || 5000;
+
+    app.listen(PORT, () => {
+        console.log(`MyCareerFlow API running on port ${PORT}`);
+    });
+}
+
+module.exports = app;
