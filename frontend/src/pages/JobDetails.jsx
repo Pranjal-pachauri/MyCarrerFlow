@@ -35,7 +35,7 @@ import api from "../api/axios";
 import ApplicationModal
     from "../components/ApplicationModal";
 
-import "../jobdetails.css";
+import "./JobDetails.css";
 
 function JobDetails() {
 
